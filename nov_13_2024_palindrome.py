@@ -24,6 +24,7 @@
 
 test = 'babad'
 test2 = 'cbbd'
+test3 = 'ac'
 
 class Solution:
     def longestPalindrome(self, s: str) -> str:
@@ -51,6 +52,19 @@ class Solution:
             else:
                 char_counter = 0
                 idx_counter += 1
+
+        if len(palindrome_idx_list) > 1:
+            final = s[palindrome_idx_list[0]:palindrome_idx_list[-1] + 1]
+        else:
+            final = s[0]
+
+        return final
+
+
+#need to figure out whwat to do for the test case "abb"
+
+s1 = Solution()
+print(s1.longestPalindrome(test3))
 
         # print(s, "start string")
 
